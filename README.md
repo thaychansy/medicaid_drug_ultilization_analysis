@@ -9,8 +9,8 @@ More information about the data set and an explanation of the data field descrip
 
 Check out the Exploratory Data Analysis Dashboard APP [here](https://thaychansy-medicaid-drug-ultilization-analysis-app-5pxp8h.streamlit.app/).
 
-<a href="https://github.com/user-attachments/assets/36a83db3-c482-4cc3-b889-1bdf2966423e" target="_blank">
-    <img width="953" alt="image" src="[https://github.com/user-attachments/assets/36a83db3-c482-4cc3-b889-1bdf2966423e](https://thaychansy-medicaid-drug-ultilization-analysis-app-5pxp8h.streamlit.app/)">
+<a href="https://thaychansy-medicaid-drug-ultilization-analysis-app-5pxp8h.streamlit.app/" target="_blank">
+    <img width="953" alt="image" src="https://github.com/user-attachments/assets/36a83db3-c482-4cc3-b889-1bdf2966423e">
 </a>
 
 
