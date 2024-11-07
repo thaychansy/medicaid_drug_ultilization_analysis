@@ -7,7 +7,7 @@ This repository provides an in-depth analysis of a drug utilization dataset, inc
 
 More information about the data set and an explanation of the data field descriptions can be found [here](https://www.medicaid.gov/medicaid/prescription-drugs/medicaid-drug-rebate-program/index.html).
 
-Check out the Exploratory Data Analysis (EDA) Dashboard APP [here](https://thaychansy-medicaid-drug-ultilization-analysis-app-5pxp8h.streamlit.app/).
+Check out the Exploratory Data Analysis (EDA) Dashboard APP developed by Thay Chansy [here](https://thaychansy-medicaid-drug-ultilization-analysis-app-5pxp8h.streamlit.app/).
 
 <a href="https://thaychansy-medicaid-drug-ultilization-analysis-app-5pxp8h.streamlit.app/" target="_blank">
     <img width="990" alt="image" src="https://github.com/user-attachments/assets/6da3343e-6fe9-44a4-8571-20ae0bee20d6">
