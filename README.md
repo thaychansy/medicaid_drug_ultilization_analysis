@@ -26,11 +26,11 @@ More information about the data set and an explanation of the data field descrip
 Key visualizations include:
 - **Boxplots and Histograms**: For detecting outliers and understanding data distribution.
   
-  <img width="800" alt="image" src="https://github.com/user-attachments/assets/fe56b255-e6c3-45c4-a3c5-d41088c7cbd3">
+<img width="800" alt="image" src="https://github.com/user-attachments/assets/fe56b255-e6c3-45c4-a3c5-d41088c7cbd3">
   
 - **Bar Charts**: Highlighting top drugs by units reimbursed and comparing utilization types.
   
- <img width="800" alt="image" src="https://github.com/user-attachments/assets/389e2379-c955-4fc9-8a30-133e845bb220">
+<img width="800" alt="image" src="https://github.com/user-attachments/assets/389e2379-c955-4fc9-8a30-133e845bb220">
   
 <img width="800" alt="image" src="https://github.com/user-attachments/assets/e9905570-b694-450f-a53f-d9050c73b51d">
 
@@ -40,11 +40,11 @@ Key visualizations include:
 
 - **Line Plot**: Showing reimbursement trends over time.
   
-  <img width="800" alt="image" src="https://github.com/user-attachments/assets/2b25ec4d-97b8-4b06-b0ca-c529d7ad4c42">
+<img width="800" alt="image" src="https://github.com/user-attachments/assets/2b25ec4d-97b8-4b06-b0ca-c529d7ad4c42">
 
 - **Scatter Plot**: Correlation analysis between prescriptions and reimbursement.
   
-  <img width="800" alt="image" src="https://github.com/user-attachments/assets/a3376c99-5236-4468-8bed-b26413fb3673">
+<img width="800" alt="image" src="https://github.com/user-attachments/assets/a3376c99-5236-4468-8bed-b26413fb3673">
 
 
 ## Getting Started
