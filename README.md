@@ -91,10 +91,21 @@ The dataset used in this analysis was taken from the [Medicaid Drug Rebate Progr
 - `Non Medicaid Amount Reimbursed`
 - `Utilization Type`
 
-## Results and Insights
+## Results
 - **FFSU Dominance**: The analysis revealed that Fee-for-Service Utilization (FFSU) has significantly higher units reimbursed and total reimbursement amounts compared to Managed Care Organization Utilization (MCOU).
 - **Outlier Analysis**: Outliers were detected in key numerical columns, helping identify potential data points for deeper investigation.
 - **Reimbursement Trends**: Clear trends were observed in reimbursement amounts over different quarters, aiding in understanding temporal patterns.
+
+Insights:
+
+The dataset provides a clear overview of drug utilization and reimbursement patterns, emphasizing the significant role of Medicaid in covering drug costs and the presence of high-cost drugs that disproportionately contribute to total reimbursements. Additionally, the discrepancy between utilization types (FFSU and MCOU) highlights differences in prescription practices and cost structures.
+
+Key Observations:
+
+Medicaid's overwhelming contribution points to a reliance on government-funded drug programs.
+Costly medications have a substantial impact on reimbursement totals despite potentially lower prescription numbers.
+Outliers in the data suggest that certain drugs or cases are exceptional and can skew results.
+Seasonal or policy-driven trends are evident in quarterly reimbursement shifts.
 
 ## Future Work
 - **Deeper Analysis by Drug Category**: Identify specific drugs contributing to high reimbursements.
