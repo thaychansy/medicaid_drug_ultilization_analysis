@@ -98,7 +98,7 @@ def medicaid_vs_non_medicaid_comparison(df):
 
 # Main function for Streamlit app
 def main():
-    st.title("Drug Utilization EDA Application")
+    st.title("Drug Utilization Dashboard Application")
     
     # Automatically load the CSV file
     file_path = 'data/drug_utilization_data.csv'  # Replace with your CSV file path
