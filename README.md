@@ -34,9 +34,9 @@ Key visualizations include:
   
 <img width="800" alt="image" src="https://github.com/user-attachments/assets/e9905570-b694-450f-a53f-d9050c73b51d">
 
-<img width="583" alt="image" src="https://github.com/user-attachments/assets/e1666e17-cf14-4862-be96-d8f9c51f5fdc">
+<img width="800" alt="image" src="https://github.com/user-attachments/assets/e1666e17-cf14-4862-be96-d8f9c51f5fdc">
 
-<img width="582" alt="image" src="https://github.com/user-attachments/assets/72363bc5-9c9a-4b06-9fcc-56150007749c">
+<img width="800" alt="image" src="https://github.com/user-attachments/assets/72363bc5-9c9a-4b06-9fcc-56150007749c">
 
 - **Line Plot**: Showing reimbursement trends over time.
   
