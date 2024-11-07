@@ -5,7 +5,7 @@
 ## Overview
 This repository provides an in-depth analysis of a drug utilization dataset, including data exploration, visualization, and statistical insights. The analysis includes various types of plots, outlier detection, and trends in drug reimbursement by different utilization types. The project is structured in a way that can be easily followed to replicate or extend the analysis.
 
-More information about the data set and an explanation of the data field descriptions can be found in this FAQ [https://www.medicaid.gov/medicaid/prescription-drugs/medicaid-drug-rebate-program/index.html](here).
+More information about the data set and an explanation of the data field descriptions can be found [here](https://www.medicaid.gov/medicaid/prescription-drugs/medicaid-drug-rebate-program/index.html).
 
 ## Project Structure
 - **medicaid_drug_utilization_analysis.ipynb**: Jupyter Notebook containing all analysis code and visualizations.
