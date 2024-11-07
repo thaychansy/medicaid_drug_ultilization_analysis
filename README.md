@@ -10,7 +10,8 @@ More information about the data set and an explanation of the data field descrip
 Check out the Exploratory Data Analysis (EDA) Dashboard APP developed by Thay Chansy [here](https://thaychansy-medicaid-drug-ultilization-analysis-app-5pxp8h.streamlit.app/).
 
 <a href="https://thaychansy-medicaid-drug-ultilization-analysis-app-5pxp8h.streamlit.app/" target="_blank">
-    <img width="990" alt="image" src="https://github.com/user-attachments/assets/6da3343e-6fe9-44a4-8571-20ae0bee20d6">
+    <img width="980" alt="image" src="https://github.com/user-attachments/assets/7f134fc7-24e9-44ff-bec2-90046a3883fc">
+
 
 </a>
 
