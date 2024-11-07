@@ -100,6 +100,7 @@ The dataset used in this analysis was taken from the [Medicaid Drug Rebate Progr
 - **Deeper Analysis by Drug Category**: Identify specific drugs contributing to high reimbursements.
 - **Time Series Forecasting**: Extend the analysis to predict future trends.
 - **Policy Impact Studies**: Analyze how changes in healthcare policy might affect drug utilization and reimbursement.
+- Utilize API calls for real time automactic updates.
 
 ## Contributing
 Contributions are welcome! Please open an issue or submit a pull request with improvements or additional features.
