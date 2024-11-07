@@ -23,16 +23,16 @@ This repository provides an in-depth analysis of a drug utilization dataset, inc
 ## Visualizations
 Key visualizations include:
 - **Boxplots and Histograms**: For detecting outliers and understanding data distribution.
-  <img width="548" alt="image" src="https://github.com/user-attachments/assets/fe56b255-e6c3-45c4-a3c5-d41088c7cbd3">
+  <img width="800" alt="image" src="https://github.com/user-attachments/assets/fe56b255-e6c3-45c4-a3c5-d41088c7cbd3">
   
 - **Bar Charts**: Highlighting top drugs by units reimbursed and comparing utilization types.
-  <img width="590" alt="image" src="https://github.com/user-attachments/assets/e480a8b5-f546-4fb3-80b1-11e3d3311f60">
+  <img width="800" alt="image" src="https://github.com/user-attachments/assets/e480a8b5-f546-4fb3-80b1-11e3d3311f60">
 
 - **Line Plot**: Showing reimbursement trends over time.
-  <img width="588" alt="image" src="https://github.com/user-attachments/assets/2b25ec4d-97b8-4b06-b0ca-c529d7ad4c42">
+  <img width="800" alt="image" src="https://github.com/user-attachments/assets/2b25ec4d-97b8-4b06-b0ca-c529d7ad4c42">
 
 - **Scatter Plot**: Correlation analysis between prescriptions and reimbursement.
-  <img width="573" alt="image" src="https://github.com/user-attachments/assets/a3376c99-5236-4468-8bed-b26413fb3673">
+  <img width="800" alt="image" src="https://github.com/user-attachments/assets/a3376c99-5236-4468-8bed-b26413fb3673">
 
 
 ## Getting Started
