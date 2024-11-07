@@ -29,6 +29,9 @@ Key visualizations include:
 - **Bar Charts**: Highlighting top drugs by units reimbursed and comparing utilization types.
   
   <img width="800" alt="image" src="https://github.com/user-attachments/assets/e480a8b5-f546-4fb3-80b1-11e3d3311f60">
+  
+
+  <img width="800" alt="image" src="https://github.com/user-attachments/assets/9d4840f6-c82c-4eb4-badf-489ed03279eb">
 
 - **Line Plot**: Showing reimbursement trends over time.
   
