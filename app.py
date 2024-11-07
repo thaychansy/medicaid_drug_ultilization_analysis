@@ -30,10 +30,6 @@ def perform_eda_on_drug_utilization(df):
         st.write("No data available for EDA.")
         return
 
-    # Display basic info
-    st.write("### Data Overview as of 10/21/2024")
-    st.dataframe(df)
-
     # Generate summary table of top drugs by total reimbursement
     st.write("### Top 10 Drugs by Total Reimbursement")
     if 'Product Name' in df.columns and 'Total Amount Reimbursed' in df.columns:
@@ -67,6 +63,24 @@ def perform_eda_on_drug_utilization(df):
     st.write("### Total Amount Reimbursed by Utilization Type")
     st.bar_chart(utilization_trends.set_index('Utilization Type')['Total Amount Reimbursed'])
 
+# Function to add search functionality
+def search_data(df):
+    """
+    Add a search function for querying the data based on user input.
+    """
+    st.write("### Search the Dataset")
+    search_query = st.text_input("Enter a search term (e.g., drug name, type):")
+    
+    if search_query:
+        search_results = df[df.apply(lambda row: row.astype(str).str.contains(search_query, case=False).any(), axis=1)]
+        if not search_results.empty:
+            st.write(f"Results for '{search_query}':")
+            st.dataframe(search_results)
+        else:
+            st.write(f"No results found for '{search_query}'.")
+    else:
+        st.dataframe(df)
+
 # Main function for Streamlit app
 def main():
     st.title("MDRP California State Drug Utilization Dashboard")
@@ -76,6 +90,9 @@ def main():
     try:
         df = pd.read_csv(file_path)
         df = handle_missing_values(df)
+        
+        # Add search functionality
+        search_data(df)
         
         # Perform EDA
         perform_eda_on_drug_utilization(df)
@@ -93,10 +110,15 @@ def main():
         else:
             st.warning("Columns for 'Medicaid Amount Reimbursed' or 'Non Medicaid Amount Reimbursed' are not available in the dataset.")
         
+        # Add footer
+        st.markdown("---")
+        st.markdown("**MDRP California State Drug Utilization Dashboard** - Developed by Thay Chansy | © 2024")
+        
     except FileNotFoundError:
         st.error(f"CSV file not found at the specified path: {file_path}")
     except Exception as e:
         st.error(f"An error occurred: {e}")
+        
 
 # Run the main function for Streamlit app
 if __name__ == "__main__":
