@@ -7,6 +7,8 @@ This repository provides an in-depth analysis of a drug utilization dataset, inc
 
 More information about the data set and an explanation of the data field descriptions can be found [here](https://www.medicaid.gov/medicaid/prescription-drugs/medicaid-drug-rebate-program/index.html).
 
+Check out the Exploratory Data Analysis Databoard [here](https://thaychansy-medicaid-drug-ultilization-analysis-app-5pxp8h.streamlit.app/).
+
 ## Project Structure
 - **medicaid_drug_utilization_analysis.ipynb**: Jupyter Notebook containing all analysis code and visualizations.
 - **data/processed_drug_utilization_data.csv**: Processed dataset with missing values handled and numerical columns filled.
