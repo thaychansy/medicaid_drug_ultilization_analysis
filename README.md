@@ -10,7 +10,7 @@ More information about the data set and an explanation of the data field descrip
 Check out the Exploratory Data Analysis (EDA) Dashboard APP [here](https://thaychansy-medicaid-drug-ultilization-analysis-app-5pxp8h.streamlit.app/).
 
 <a href="https://thaychansy-medicaid-drug-ultilization-analysis-app-5pxp8h.streamlit.app/" target="_blank">
-    <img width="800" alt="image" src="https://github.com/user-attachments/assets/36a83db3-c482-4cc3-b889-1bdf2966423e">
+    <img width="990" alt="image" src="https://github.com/user-attachments/assets/36a83db3-c482-4cc3-b889-1bdf2966423e">
 </a>
 
 
@@ -34,25 +34,25 @@ Check out the Exploratory Data Analysis (EDA) Dashboard APP [here](https://thayc
 Key visualizations include:
 - **Boxplots and Histograms**: For detecting outliers and understanding data distribution.
   
-<img width="800" alt="image" src="https://github.com/user-attachments/assets/fe56b255-e6c3-45c4-a3c5-d41088c7cbd3">
+<img width="990" alt="image" src="https://github.com/user-attachments/assets/fe56b255-e6c3-45c4-a3c5-d41088c7cbd3">
   
 - **Bar Charts**: Highlighting top drugs by units reimbursed and comparing utilization types.
   
-<img width="800" alt="image" src="https://github.com/user-attachments/assets/389e2379-c955-4fc9-8a30-133e845bb220">
+<img width="990" alt="image" src="https://github.com/user-attachments/assets/389e2379-c955-4fc9-8a30-133e845bb220">
   
-<img width="800" alt="image" src="https://github.com/user-attachments/assets/e9905570-b694-450f-a53f-d9050c73b51d">
+<img width="990" alt="image" src="https://github.com/user-attachments/assets/e9905570-b694-450f-a53f-d9050c73b51d">
 
-<img width="800" alt="image" src="https://github.com/user-attachments/assets/e1666e17-cf14-4862-be96-d8f9c51f5fdc">
+<img width="990" alt="image" src="https://github.com/user-attachments/assets/e1666e17-cf14-4862-be96-d8f9c51f5fdc">
 
-<img width="800" alt="image" src="https://github.com/user-attachments/assets/72363bc5-9c9a-4b06-9fcc-56150007749c">
+<img width="990" alt="image" src="https://github.com/user-attachments/assets/72363bc5-9c9a-4b06-9fcc-56150007749c">
 
 - **Line Plot**: Showing reimbursement trends over time.
   
-<img width="800" alt="image" src="https://github.com/user-attachments/assets/2b25ec4d-97b8-4b06-b0ca-c529d7ad4c42">
+<img width="990" alt="image" src="https://github.com/user-attachments/assets/2b25ec4d-97b8-4b06-b0ca-c529d7ad4c42">
 
 - **Scatter Plot**: Correlation analysis between prescriptions and reimbursement.
   
-<img width="800" alt="image" src="https://github.com/user-attachments/assets/a3376c99-5236-4468-8bed-b26413fb3673">
+<img width="990" alt="image" src="https://github.com/user-attachments/assets/a3376c99-5236-4468-8bed-b26413fb3673">
 
 
 ## Getting Started
