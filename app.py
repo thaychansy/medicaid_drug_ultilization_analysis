@@ -18,6 +18,9 @@ def handle_missing_values(df):
     for col in df.select_dtypes(include=['object']).columns:
         if df[col].isnull().sum() > 0:
             df[col].fillna(df[col].mode()[0], inplace=True)
+    
+    if 'Year' in df.columns:
+        df['Year'] = df['Year'].astype('category')
 
     return df
 
