@@ -86,7 +86,7 @@ def search_data(df):
 
 # Main function for Streamlit app
 def main():
-    st.title("MDRP California State Drug Utilization Dashboard")
+    st.title("MDRP California State Drug Utilization Dashboard 2024")
     
     # Automatically load the CSV file
     file_path = 'data/drug_utilization_data.csv'  # Replace with your CSV file path
