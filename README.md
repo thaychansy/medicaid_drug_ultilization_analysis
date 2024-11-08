@@ -41,17 +41,20 @@ Key visualizations include:
 
 - **Bar Charts**: Highlighting top drugs by units reimbursed and comparing utilization types.
 
-<img width="990" alt="image" src="https://github.com/user-attachments/assets/5d49a40a-e45b-4b82-abcd-d838cc03cb20" style="border: 2px solid black; border-radius: 4px;">
+<img width="990" alt="image" src="https://github.com/user-attachments/assets/b2c9b734-7b61-486a-ab5b-631b4f41b74e" style="border: 2px solid black; border-radius: 4px;">
 
-<img width="990" alt="image" src="https://github.com/user-attachments/assets/e9905570-b694-450f-a53f-d9050c73b51d" style="border: 2px solid black; border-radius: 4px;">
+<img width="990" alt="image" src="https://github.com/user-attachments/assets/09076d03-94b7-454e-991f-2e68ae700f0e" style="border: 2px solid black; border-radius: 4px;">
 
-<img width="990" alt="image" src="https://github.com/user-attachments/assets/e1666e17-cf14-4862-be96-d8f9c51f5fdc" style="border: 2px solid black; border-radius: 4px;">
+<img width="990" alt="image" src="https://github.com/user-attachments/assets/0569c901-b39f-4d8f-ac0d-e524105cde39" style="border: 2px solid black; border-radius: 4px;">
 
-<img width="990" alt="image" src="https://github.com/user-attachments/assets/72363bc5-9c9a-4b06-9fcc-56150007749c" style="border: 2px solid black; border-radius: 4px;">
+<img width="990" alt="image" src="https://github.com/user-attachments/assets/d53e396f-a54f-42e5-a299-11b0761cce52" style="border: 2px solid black; border-radius: 4px;">
+
+<img width="990" alt="image" src="https://github.com/user-attachments/assets/5d806074-44d1-4d83-9e0a-2fcc8a3365be" style="border: 2px solid black; border-radius: 4px;">
+
 
 - **Line Plot**: Showing reimbursement trends over time.
 
-<img width="576" alt="image" src="https://github.com/user-attachments/assets/ad1cbad4-d88f-4a78-b278-8ec7b6296248" style="border: 2px solid black; border-radius: 4px;">
+<img width="990" alt="image" src="https://github.com/user-attachments/assets/ad1cbad4-d88f-4a78-b278-8ec7b6296248" style="border: 2px solid black; border-radius: 4px;">
 
 - **Scatter Plot**: Correlation analysis between prescriptions and reimbursement.
   
