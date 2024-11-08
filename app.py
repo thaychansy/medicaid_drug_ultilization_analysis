@@ -21,6 +21,15 @@ def handle_missing_values(df):
     
     if 'Year' in df.columns:
         df['Year'] = df['Year'].astype('category')
+        
+    if 'NDC' in df.columns:
+        df['NDC'] = df['NDC'].astype('category')
+
+    if 'Labeler Code' in df.columns:
+        df['Labeler Code'] = df['Labeler Code'].astype('category')
+
+    if 'Product Code' in df.columns:
+        df['Product Code'] = df['Product Code'].astype('category')
 
     return df
 
