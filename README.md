@@ -37,7 +37,7 @@ Check out the Exploratory Data Analysis (EDA) Dashboard APP developed by Thay Ch
 Key visualizations include:
 - **Boxplots and Histograms**: For detecting outliers and understanding data distribution.
   
-<img width="548" alt="image" src="https://github.com/user-attachments/assets/4766381d-0232-4e7b-a64e-60dc27764b4c" style="border: 2px solid black; border-radius: 4px;">
+<img width="990" alt="image" src="https://github.com/user-attachments/assets/4766381d-0232-4e7b-a64e-60dc27764b4c" style="border: 2px solid black; border-radius: 4px;">
 
 - **Bar Charts**: Highlighting top drugs by units reimbursed and comparing utilization types.
   
