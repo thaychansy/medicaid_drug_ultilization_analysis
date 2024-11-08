@@ -50,8 +50,8 @@ Key visualizations include:
 <img width="990" alt="image" src="https://github.com/user-attachments/assets/72363bc5-9c9a-4b06-9fcc-56150007749c" style="border: 2px solid black; border-radius: 4px;">
 
 - **Line Plot**: Showing reimbursement trends over time.
-  
-<img width="990" alt="image" src="https://github.com/user-attachments/assets/2b25ec4d-97b8-4b06-b0ca-c529d7ad4c42" style="border: 2px solid black; border-radius: 4px;">
+
+<img width="980" alt="image" src="https://github.com/user-attachments/assets/4ff5525d-7b67-40c2-98d2-e710b4e56703" style="border: 2px solid black; border-radius: 4px;">
 
 - **Scatter Plot**: Correlation analysis between prescriptions and reimbursement.
   
