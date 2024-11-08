@@ -12,7 +12,7 @@ Check out the Exploratory Data Analysis (EDA) Dashboard APP developed by Thay Ch
 
 ## Watch the Demo!
 
-<kbd> [![Watch the video]([https://github.com/thaychansy/VBA-challenge/assets/161902555/1bf5c81f-a272-446e-8c8b-c84aa36245b8](https://github.com/user-attachments/assets/505c63cd-22c7-4468-af57-66a4c5ae785d))](https://youtu.be/cWExS3x3AFQ) </kbd>
+<kbd> [![Watch the video]((https://github.com/user-attachments/assets/505c63cd-22c7-4468-af57-66a4c5ae785d))](https://youtu.be/cWExS3x3AFQ) </kbd>
 
 
 </a>
