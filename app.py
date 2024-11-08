@@ -66,19 +66,36 @@ def perform_eda_on_drug_utilization(df):
         st.write("### Total Amount ($) Reimbursed by Utilization Type")
         st.bar_chart(utilization_trends.set_index('Utilization Type')['Total Amount Reimbursed'])
         
-# Function to add search functionality with dashboard generation
+# Function to add search functionality with filter by column drop-down
+
+# Function to add search functionality with filter by column drop-down
+
 def search_data(df):
     """
     Add a search function for querying the data and generating dashboards based on user input.
+    Includes a filter-by-column option for more targeted searches.
     """
-    search_query = st.text_input("Search the Dataset (Update: 10/21/24) - Enter a search term (e.g., drug name, type):")
-    
+    st.subheader("Search the Dataset")
+
+    # Search query input
+    search_query = st.text_input("Enter a search term (e.g., drug name, type):")
+
+    # Column selection drop-down
+    column_options = ['All Columns'] + list(df.columns)
+    selected_column = st.selectbox("Select a column to search in:", column_options)
+
     if search_query:
-        search_results = df[df.apply(lambda row: row.astype(str).str.contains(search_query, case=False).any(), axis=1)]
+        if selected_column == 'All Columns':
+            # Search across all columns
+            search_results = df[df.apply(lambda row: row.astype(str).str.contains(search_query, case=False).any(), axis=1)]
+        else:
+            # Search within the selected column
+            search_results = df[df[selected_column].astype(str).str.contains(search_query, case=False)]
+
         if not search_results.empty:
-            st.write(f"Results for '{search_query}':")
+            st.write(f"Results for '{search_query}' in '{selected_column}':")
             st.dataframe(search_results)
-            
+
             # Generate summary charts based on the search results
             st.subheader(f"Total Amount ($) Reimbursed ('{search_query}')")
             if 'Product Name' in search_results.columns and 'Total Amount Reimbursed' in search_results.columns:
@@ -104,7 +121,7 @@ def search_data(df):
                 st.bar_chart(utilization_trends.set_index('Utilization Type')['Units Reimbursed'])
                 st.subheader(f"Total Amount ($) Reimbursed by Utilization Type ('{search_query}')")
                 st.bar_chart(utilization_trends.set_index('Utilization Type')['Total Amount Reimbursed'])
-                
+
             st.subheader(f"Medicaid vs. Non-Medicaid Amount ($) Reimbursed ('{search_query}')")
             if 'Medicaid Amount Reimbursed' in search_results.columns and 'Non Medicaid Amount Reimbursed' in search_results.columns:
                 medicaid_comparison = search_results[['Medicaid Amount Reimbursed', 'Non Medicaid Amount Reimbursed']].sum() / 1_000  # Scale to thousands
@@ -112,9 +129,11 @@ def search_data(df):
                 medicaid_comparison_df.index.name = 'Reimbursement Type'
                 st.bar_chart(medicaid_comparison_df)
         else:
-            st.write(f"No results found for '{search_query}'.")
+            st.write(f"No results found for '{search_query}' in '{selected_column}'.")
     else:
         st.dataframe(df)
+
+
 
 # Main function for Streamlit app
 def main():
