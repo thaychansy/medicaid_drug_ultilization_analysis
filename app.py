@@ -80,7 +80,7 @@ def search_data(df):
     """
     Add a search function for querying the data based on user input.
     """
-    st.write("### Search the Dataset (Update: October 21, 2024)")
+    st.write("### Search the Dataset (Update: 10/21/24)")
     search_query = st.text_input("Enter a search term (e.g., drug name, type):")
     
     if search_query:
