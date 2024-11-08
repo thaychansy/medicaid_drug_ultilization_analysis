@@ -42,7 +42,7 @@ def perform_eda_on_drug_utilization(df):
         st.write("No data available for EDA.")
         return
 
-    with st.expander("Top 10 Drugs by Total Reimbursement"):
+    with st.expander("Top 10 Drugs by Total ($) Reimbursement"):
         if 'Product Name' in df.columns and 'Total Amount Reimbursed' in df.columns:
             summary_table = (df.groupby('Product Name')
                             .agg({'Total Amount Reimbursed': 'sum'})
