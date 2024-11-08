@@ -40,8 +40,8 @@ Key visualizations include:
 <img width="990" alt="image" src="https://github.com/user-attachments/assets/4766381d-0232-4e7b-a64e-60dc27764b4c" style="border: 2px solid black; border-radius: 4px;">
 
 - **Bar Charts**: Highlighting top drugs by units reimbursed and comparing utilization types.
-  
-<img width="990" alt="image" src="https://github.com/user-attachments/assets/389e2379-c955-4fc9-8a30-133e845bb220" style="border: 2px solid black; border-radius: 4px;">
+
+<img width="990" alt="image" src="https://github.com/user-attachments/assets/5d49a40a-e45b-4b82-abcd-d838cc03cb20" style="border: 2px solid black; border-radius: 4px;">
 
 <img width="990" alt="image" src="https://github.com/user-attachments/assets/e9905570-b694-450f-a53f-d9050c73b51d" style="border: 2px solid black; border-radius: 4px;">
 
@@ -51,7 +51,7 @@ Key visualizations include:
 
 - **Line Plot**: Showing reimbursement trends over time.
 
-<img width="990" alt="image" src="https://github.com/user-attachments/assets/4ff5525d-7b67-40c2-98d2-e710b4e56703" style="border: 2px solid black; border-radius: 4px;">
+<img width="576" alt="image" src="https://github.com/user-attachments/assets/ad1cbad4-d88f-4a78-b278-8ec7b6296248" style="border: 2px solid black; border-radius: 4px;">
 
 - **Scatter Plot**: Correlation analysis between prescriptions and reimbursement.
   
