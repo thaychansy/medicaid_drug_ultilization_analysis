@@ -57,7 +57,7 @@ Key visualizations include:
 
 - **Scatter Plot**: Correlation analysis between prescriptions and reimbursement.
 
-<img width="578" alt="image" src="https://github.com/user-attachments/assets/3a8b4071-9dd9-4c25-b25a-4a86b5749cd1" style="border: 2px solid black; border-radius: 4px;">
+<img width="990" alt="image" src="https://github.com/user-attachments/assets/3a8b4071-9dd9-4c25-b25a-4a86b5749cd1" style="border: 2px solid black; border-radius: 4px;">
   
 
 
