@@ -52,6 +52,7 @@ def perform_eda_on_drug_utilization(df):
                         .head(10))
         # Display bar chart for top 10 drugs by units reimbursed
         st.bar_chart(summary_table['Units Reimbursed'])
+        
 
     # Analysis 5 - Drug Utilization Trends by Utilization Type
     utilization_trends = df.groupby('Utilization Type')[['Units Reimbursed', 'Total Amount Reimbursed']].sum().reset_index()
