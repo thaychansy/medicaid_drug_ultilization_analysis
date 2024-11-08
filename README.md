@@ -10,7 +10,7 @@ More information about the data set and an explanation of the data field descrip
 Check out the Exploratory Data Analysis (EDA) Dashboard APP developed by Thay Chansy [here](https://thaychansy-medicaid-drug-ultilization-analysis-app-5pxp8h.streamlit.app/).
 
 <a href="https://thaychansy-medicaid-drug-ultilization-analysis-app-5pxp8h.streamlit.app/" target="_blank">
-   <img width="980" alt="image" src="https://github.com/user-attachments/assets/505c63cd-22c7-4468-af57-66a4c5ae785d">
+   <img width="990" alt="image" src="https://github.com/user-attachments/assets/505c63cd-22c7-4468-af57-66a4c5ae785d">
 
 
 
@@ -51,7 +51,7 @@ Key visualizations include:
 
 - **Line Plot**: Showing reimbursement trends over time.
 
-<img width="980" alt="image" src="https://github.com/user-attachments/assets/4ff5525d-7b67-40c2-98d2-e710b4e56703" style="border: 2px solid black; border-radius: 4px;">
+<img width="990" alt="image" src="https://github.com/user-attachments/assets/4ff5525d-7b67-40c2-98d2-e710b4e56703" style="border: 2px solid black; border-radius: 4px;">
 
 - **Scatter Plot**: Correlation analysis between prescriptions and reimbursement.
   
