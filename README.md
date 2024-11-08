@@ -12,7 +12,7 @@ Check out the Exploratory Data Analysis (EDA) Dashboard APP developed by Thay Ch
 
 ## Watch the Demo!
 
-<kbd> [![Watch the video]((https://github.com/user-attachments/assets/505c63cd-22c7-4468-af57-66a4c5ae785d))](https://youtu.be/cWExS3x3AFQ) </kbd>
+<kbd> [![Watch the video]<img width="314" alt="image" src="https://github.com/user-attachments/assets/6581724c-43c4-4c53-8e99-c2abb95384c7">](https://youtu.be/cWExS3x3AFQ) </kbd>
 
 
 </a>
