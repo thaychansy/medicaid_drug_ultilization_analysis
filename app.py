@@ -52,9 +52,8 @@ def perform_eda_on_drug_utilization(df):
 
     # Analysis 5 - Drug Utilization Trends by Utilization Type
     utilization_trends = df.groupby('Utilization Type')[['Units Reimbursed', 'Total Amount Reimbursed']].sum().reset_index()
-    utilization_trends['Units Reimbursed'] /= 1_000  # Scale to thousands
-    utilization_trends['Total Amount Reimbursed'] /= 1_000  # Scale to thousands
-
+    utilization_trends
+    
     # Plot total units reimbursed by utilization type
     st.write("### Total Units Reimbursed by Utilization Type")
     st.bar_chart(utilization_trends.set_index('Utilization Type')['Units Reimbursed'])
@@ -62,7 +61,7 @@ def perform_eda_on_drug_utilization(df):
     # Plot total amount reimbursed by utilization type
     st.write("### Total Amount Reimbursed by Utilization Type")
     st.bar_chart(utilization_trends.set_index('Utilization Type')['Total Amount Reimbursed'])
-
+    
 # Function to add search functionality
 def search_data(df):
     """
