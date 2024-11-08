@@ -63,7 +63,7 @@ def perform_eda_on_drug_utilization(df):
         st.dataframe(utilization_trends)
         st.write("### Total Units Reimbursed by Utilization Type")
         st.bar_chart(utilization_trends.set_index('Utilization Type')['Units Reimbursed'])
-        st.write("### Total Amount Reimbursed by Utilization Type")
+        st.write("### Total Amount ($) Reimbursed by Utilization Type")
         st.bar_chart(utilization_trends.set_index('Utilization Type')['Total Amount Reimbursed'])
         
 # Function to add search functionality with dashboard generation
@@ -80,7 +80,7 @@ def search_data(df):
             st.dataframe(search_results)
             
             # Generate summary charts based on the search results
-            st.subheader(f"Total Amount Reimbursed ('{search_query}')")
+            st.subheader(f"Total Amount ($) Reimbursed ('{search_query}')")
             if 'Product Name' in search_results.columns and 'Total Amount Reimbursed' in search_results.columns:
                 summary_table = (search_results.groupby('Product Name')
                                 .agg({'Total Amount Reimbursed': 'sum'})
@@ -100,12 +100,12 @@ def search_data(df):
             if 'Utilization Type' in search_results.columns:
                 utilization_trends = search_results.groupby('Utilization Type')[['Units Reimbursed', 'Total Amount Reimbursed']].sum().reset_index()
                 st.dataframe(utilization_trends)
-                st.write("### Total Units Reimbursed by Utilization Type ('{search_query}')")
+                st.subheader(f"Total Units Reimbursed by Utilization Type ('{search_query}')")
                 st.bar_chart(utilization_trends.set_index('Utilization Type')['Units Reimbursed'])
-                st.write("### Total Amount Reimbursed by Utilization Type ('{search_query}')")
+                st.subheader(f"Total Amount ($) Reimbursed by Utilization Type ('{search_query}')")
                 st.bar_chart(utilization_trends.set_index('Utilization Type')['Total Amount Reimbursed'])
                 
-            st.subheader(f"Medicaid vs. Non-Medicaid Amount Reimbursed ('{search_query}')")
+            st.subheader(f"Medicaid vs. Non-Medicaid Amount ($) Reimbursed ('{search_query}')")
             if 'Medicaid Amount Reimbursed' in search_results.columns and 'Non Medicaid Amount Reimbursed' in search_results.columns:
                 medicaid_comparison = search_results[['Medicaid Amount Reimbursed', 'Non Medicaid Amount Reimbursed']].sum() / 1_000  # Scale to thousands
                 medicaid_comparison_df = pd.DataFrame(medicaid_comparison, columns=['Total Amount'])
@@ -132,7 +132,7 @@ def main():
         # Perform EDA
         perform_eda_on_drug_utilization(df)
         
-        with st.expander("Medicaid vs. Non-Medicaid Amount Comparison"):
+        with st.expander("Medicaid vs. Non-Medicaid Amount ($) Comparison"):
             if 'Medicaid Amount Reimbursed' in df.columns and 'Non Medicaid Amount Reimbursed' in df.columns:
                 medicaid_comparison = df[['Medicaid Amount Reimbursed', 'Non Medicaid Amount Reimbursed']].sum() / 1_000  # Scale to thousands
                 medicaid_comparison_df = pd.DataFrame(medicaid_comparison, columns=['Total Amount'])
