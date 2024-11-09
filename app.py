@@ -124,7 +124,7 @@ def search_data(df):
 
             st.subheader(f"Medicaid vs. Non-Medicaid Amount ($) Reimbursed ('{search_query}')")
             if 'Medicaid Amount Reimbursed' in search_results.columns and 'Non Medicaid Amount Reimbursed' in search_results.columns:
-                medicaid_comparison = search_results[['Medicaid Amount Reimbursed', 'Non Medicaid Amount Reimbursed']].sum() / 1_000  # Scale to thousands
+                medicaid_comparison = search_results[['Medicaid Amount Reimbursed', 'Non Medicaid Amount Reimbursed']].sum()   # Scale to thousands
                 medicaid_comparison_df = pd.DataFrame(medicaid_comparison, columns=['Total Amount'])
                 medicaid_comparison_df.index.name = 'Reimbursement Type'
                 st.bar_chart(medicaid_comparison_df)
