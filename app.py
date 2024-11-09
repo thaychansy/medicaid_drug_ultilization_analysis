@@ -153,7 +153,7 @@ def main():
         
         with st.expander("Medicaid vs. Non-Medicaid Amount ($) Comparison"):
             if 'Medicaid Amount Reimbursed' in df.columns and 'Non Medicaid Amount Reimbursed' in df.columns:
-                medicaid_comparison = df[['Medicaid Amount Reimbursed', 'Non Medicaid Amount Reimbursed']].sum() / 1_000  # Scale to thousands
+                medicaid_comparison = df[['Medicaid Amount Reimbursed', 'Non Medicaid Amount Reimbursed']].sum()
                 medicaid_comparison_df = pd.DataFrame(medicaid_comparison, columns=['Total Amount'])
                 medicaid_comparison_df.index.name = 'Reimbursement Type'
                 st.bar_chart(medicaid_comparison_df)
