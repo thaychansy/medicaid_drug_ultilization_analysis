@@ -13,6 +13,10 @@ def handle_missing_values(df):
     for col in df.select_dtypes(include=['float64', 'int64']).columns:
         if df[col].isnull().sum() > 0:
             df[col].fillna(df[col].median(), inplace=True)
+            
+        # Round float columns to 2 decimal places
+        if df[col].dtype == 'float64':
+            df[col] = df[col].round(2)
     
     # Fill categorical columns with the mode
     for col in df.select_dtypes(include=['object']).columns:
@@ -30,7 +34,7 @@ def handle_missing_values(df):
 def display_summary_statistics(df):
     """Displays summary statistics and grouped data for total reimbursement and units."""
     st.subheader("Summary Statistics on Entire Dataset")
-    st.write(df.describe())
+    st.write(df.describe().applymap(lambda x: f"{x:.2f}" if isinstance(x, (float, int)) else x))
 
     with st.expander("Summary Totals by Product Name"):
         grouped_stats = df.groupby('Product Name')[['Total Amount Reimbursed', 'Units Reimbursed']].sum().reset_index()
