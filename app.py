@@ -91,7 +91,7 @@ def search_data(df):
     Add a search function for querying the data and generating dashboards based on user input.
     Includes a filter-by-column option for more targeted searches.
     """
-    st.subheader("Search the Dataset")
+    st.subheader("Search the Dataset (Update: 10/21/24)")
 
     # Search query input
     search_query = st.text_input("Enter a search term (e.g., drug name, type):")
