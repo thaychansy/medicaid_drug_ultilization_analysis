@@ -29,10 +29,10 @@ def handle_missing_values(df):
 # Function to display summary statistics and charts
 def display_summary_statistics(df):
     """Displays summary statistics and grouped data for total reimbursement and units."""
-    st.subheader("Summary Statistics")
+    st.subheader("Summary Statistics on Entire Dataset")
     st.write(df.describe())
 
-    with st.expander("Summary Statistics by Product Name"):
+    with st.expander("Summary Totals by Product Name"):
         grouped_stats = df.groupby('Product Name')[['Total Amount Reimbursed', 'Units Reimbursed']].sum().reset_index()
         st.dataframe(grouped_stats)
 
