@@ -32,7 +32,7 @@ def display_summary_statistics(df):
     st.subheader("Summary Statistics for Entire Dataset")
     st.write(df.describe())
 
-    with st.expander("Summary Statistics by Product Name"):
+    with st.expander("Summary Totals by Product Name"):
         grouped_stats = df.groupby('Product Name')[['Total Amount Reimbursed', 'Units Reimbursed']].sum().reset_index()
         st.dataframe(grouped_stats)
 
@@ -42,14 +42,14 @@ def display_summary_statistics(df):
         with st.expander("Top 10 Drugs by Total ($) Reimbursement"):
             if 'Product Name' in df.columns and 'Total Amount Reimbursed' in df.columns:
                 top_reimbursed = (df.groupby('Product Name')['Total Amount Reimbursed']
-                                  .sum().sort_values(ascending=False).head(10))
+                                .sum().sort_values(ascending=False).head(10))
                 st.bar_chart(top_reimbursed)
 
     with col2:
         with st.expander("Top 10 Drugs by Units Reimbursed"):
             if 'Product Name' in df.columns and 'Units Reimbursed' in df.columns:
                 top_units = (df.groupby('Product Name')['Units Reimbursed']
-                             .sum().sort_values(ascending=False).head(10))
+                            .sum().sort_values(ascending=False).head(10))
                 st.bar_chart(top_units)
 
     with st.expander("Drug Utilization Trends by Utilization Type"):
@@ -86,14 +86,14 @@ def search_data(df):
                 st.subheader(f"Total Amount ($) Reimbursed ('{search_query}')")
                 if 'Product Name' in search_results.columns and 'Total Amount Reimbursed' in search_results.columns:
                     top_reimbursed = (search_results.groupby('Product Name')['Total Amount Reimbursed']
-                                      .sum().sort_values(ascending=False).head(10))
+                                    .sum().sort_values(ascending=False).head(10))
                     st.bar_chart(top_reimbursed)
 
             with col6:
                 st.subheader(f"Units Reimbursed ('{search_query}')")
                 if 'Product Name' in search_results.columns and 'Units Reimbursed' in search_results.columns:
                     top_units = (search_results.groupby('Product Name')['Units Reimbursed']
-                                 .sum().sort_values(ascending=False).head(10))
+                                .sum().sort_values(ascending=False).head(10))
                     st.bar_chart(top_units)
 
             st.subheader(f"Utilization Type Analysis ('{search_query}')")
