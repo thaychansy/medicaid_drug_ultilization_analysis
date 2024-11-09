@@ -79,10 +79,10 @@ def perform_eda_on_drug_utilization(df):
         st.dataframe(utilization_trends)
         col3, col4 = st.columns(2)
         with col3:
-            st.write("### Total Units Reimbursed by Utilization Type")
+            st.write("### Total Units Reimbursed")
             st.bar_chart(utilization_trends.set_index('Utilization Type')['Units Reimbursed'])
         with col4:
-            st.write("### Total Amount ($) Reimbursed by Utilization Type")
+            st.write("### Total Amount ($) Reimbursed")
             st.bar_chart(utilization_trends.set_index('Utilization Type')['Total Amount Reimbursed'])
         
 # Function to add search functionality with filter by column drop-down
