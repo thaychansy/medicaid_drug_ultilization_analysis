@@ -30,6 +30,12 @@ def handle_missing_values(df):
 
     if 'Product Code' in df.columns:
         df['Product Code'] = df['Product Code'].astype('category')
+    
+    if 'Package Size' in df.columns:
+        df['Package Size'] = df['Package Size'].astype('category')
+    
+    if 'Quarter' in df.columns:
+        df['Quarter'] = df['Quarter'].astype('category')
 
     return df
 
@@ -42,34 +48,43 @@ def perform_eda_on_drug_utilization(df):
         st.write("No data available for EDA.")
         return
 
-    with st.expander("Top 10 Drugs by Total ($) Reimbursement"):
-        if 'Product Name' in df.columns and 'Total Amount Reimbursed' in df.columns:
-            summary_table = (df.groupby('Product Name')
-                            .agg({'Total Amount Reimbursed': 'sum'})
-                            .sort_values(by='Total Amount Reimbursed', ascending=False)
-                            .head(10))
-            st.bar_chart(summary_table['Total Amount Reimbursed'])
-    
-    with st.expander("Top 10 Drugs by Units Reimbursed"):
-        if 'Product Name' in df.columns and 'Units Reimbursed' in df.columns:
-            summary_table = (df.groupby('Product Name')
-                            .agg({'Units Reimbursed': 'sum'})
-                            .sort_values(by='Units Reimbursed', ascending=False)
-                            .head(10))
-            st.bar_chart(summary_table['Units Reimbursed'])
+    # Display summary statistics
+    st.subheader("Summary Statistics")
+    st.write(df.describe())
+
+    # Responsive layout with columns
+    col1, col2 = st.columns(2)
+
+    with col1:
+        with st.expander("Top 10 Drugs by Total ($) Reimbursement"):
+            if 'Product Name' in df.columns and 'Total Amount Reimbursed' in df.columns:
+                summary_table = (df.groupby('Product Name')
+                                .agg({'Total Amount Reimbursed': 'sum'})
+                                .sort_values(by='Total Amount Reimbursed', ascending=False)
+                                .head(10))
+                st.bar_chart(summary_table['Total Amount Reimbursed'])
+
+    with col2:
+        with st.expander("Top 10 Drugs by Units Reimbursed"):
+            if 'Product Name' in df.columns and 'Units Reimbursed' in df.columns:
+                summary_table = (df.groupby('Product Name')
+                                .agg({'Units Reimbursed': 'sum'})
+                                .sort_values(by='Units Reimbursed', ascending=False)
+                                .head(10))
+                st.bar_chart(summary_table['Units Reimbursed'])
 
     with st.expander("Drug Utilization Trends by Utilization Type"):
         utilization_trends = df.groupby('Utilization Type')[['Units Reimbursed', 'Total Amount Reimbursed']].sum().reset_index()
         st.dataframe(utilization_trends)
-        st.write("### Total Units Reimbursed by Utilization Type")
-        st.bar_chart(utilization_trends.set_index('Utilization Type')['Units Reimbursed'])
-        st.write("### Total Amount ($) Reimbursed by Utilization Type")
-        st.bar_chart(utilization_trends.set_index('Utilization Type')['Total Amount Reimbursed'])
+        col3, col4 = st.columns(2)
+        with col3:
+            st.write("### Total Units Reimbursed by Utilization Type")
+            st.bar_chart(utilization_trends.set_index('Utilization Type')['Units Reimbursed'])
+        with col4:
+            st.write("### Total Amount ($) Reimbursed by Utilization Type")
+            st.bar_chart(utilization_trends.set_index('Utilization Type')['Total Amount Reimbursed'])
         
 # Function to add search functionality with filter by column drop-down
-
-# Function to add search functionality with filter by column drop-down
-
 def search_data(df):
     """
     Add a search function for querying the data and generating dashboards based on user input.
@@ -97,34 +112,40 @@ def search_data(df):
             st.dataframe(search_results)
 
             # Generate summary charts based on the search results
-            st.subheader(f"Total Amount ($) Reimbursed ('{search_query}')")
-            if 'Product Name' in search_results.columns and 'Total Amount Reimbursed' in search_results.columns:
-                summary_table = (search_results.groupby('Product Name')
-                                .agg({'Total Amount Reimbursed': 'sum'})
-                                .sort_values(by='Total Amount Reimbursed', ascending=False)
-                                .head(10))
-                st.bar_chart(summary_table['Total Amount Reimbursed'])
+            col5, col6 = st.columns(2)
+            with col5:
+                st.subheader(f"Total Amount ($) Reimbursed ('{search_query}')")
+                if 'Product Name' in search_results.columns and 'Total Amount Reimbursed' in search_results.columns:
+                    summary_table = (search_results.groupby('Product Name')
+                                    .agg({'Total Amount Reimbursed': 'sum'})
+                                    .sort_values(by='Total Amount Reimbursed', ascending=False)
+                                    .head(10))
+                    st.bar_chart(summary_table['Total Amount Reimbursed'])
 
-            st.subheader(f"Units Reimbursed ('{search_query}')")
-            if 'Product Name' in search_results.columns and 'Units Reimbursed' in search_results.columns:
-                summary_table = (search_results.groupby('Product Name')
-                                .agg({'Units Reimbursed': 'sum'})
-                                .sort_values(by='Units Reimbursed', ascending=False)
-                                .head(10))
-                st.bar_chart(summary_table['Units Reimbursed'])
+            with col6:
+                st.subheader(f"Units Reimbursed ('{search_query}')")
+                if 'Product Name' in search_results.columns and 'Units Reimbursed' in search_results.columns:
+                    summary_table = (search_results.groupby('Product Name')
+                                    .agg({'Units Reimbursed': 'sum'})
+                                    .sort_values(by='Units Reimbursed', ascending=False)
+                                    .head(10))
+                    st.bar_chart(summary_table['Units Reimbursed'])
 
             st.subheader(f"Utilization Type Analysis ('{search_query}')")
             if 'Utilization Type' in search_results.columns:
                 utilization_trends = search_results.groupby('Utilization Type')[['Units Reimbursed', 'Total Amount Reimbursed']].sum().reset_index()
                 st.dataframe(utilization_trends)
-                st.subheader(f"Total Units Reimbursed by Utilization Type ('{search_query}')")
-                st.bar_chart(utilization_trends.set_index('Utilization Type')['Units Reimbursed'])
-                st.subheader(f"Total Amount ($) Reimbursed by Utilization Type ('{search_query}')")
-                st.bar_chart(utilization_trends.set_index('Utilization Type')['Total Amount Reimbursed'])
+                col7, col8 = st.columns(2)
+                with col7:
+                    st.subheader(f"Total Units Reimbursed by Utilization Type ('{search_query}')")
+                    st.bar_chart(utilization_trends.set_index('Utilization Type')['Units Reimbursed'])
+                with col8:
+                    st.subheader(f"Total Amount ($) Reimbursed by Utilization Type ('{search_query}')")
+                    st.bar_chart(utilization_trends.set_index('Utilization Type')['Total Amount Reimbursed'])
 
             st.subheader(f"Medicaid vs. Non-Medicaid Amount ($) Reimbursed ('{search_query}')")
             if 'Medicaid Amount Reimbursed' in search_results.columns and 'Non Medicaid Amount Reimbursed' in search_results.columns:
-                medicaid_comparison = search_results[['Medicaid Amount Reimbursed', 'Non Medicaid Amount Reimbursed']].sum()   # Scale to thousands
+                medicaid_comparison = search_results[['Medicaid Amount Reimbursed', 'Non Medicaid Amount Reimbursed']].sum()
                 medicaid_comparison_df = pd.DataFrame(medicaid_comparison, columns=['Total Amount'])
                 medicaid_comparison_df.index.name = 'Reimbursement Type'
                 st.bar_chart(medicaid_comparison_df)
@@ -132,8 +153,6 @@ def search_data(df):
             st.write(f"No results found for '{search_query}' in '{selected_column}'.")
     else:
         st.dataframe(df)
-
-
 
 # Main function for Streamlit app
 def main():
@@ -167,7 +186,7 @@ def main():
         st.error(f"CSV file not found at the specified path: {file_path}")
     except Exception as e:
         st.error(f"An error occurred: {e}")
-
-# Run the main function for Streamlit app
+        
+        # Run the main function for Streamlit app
 if __name__ == "__main__":
     main()
