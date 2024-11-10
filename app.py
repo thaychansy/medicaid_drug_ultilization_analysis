@@ -59,8 +59,8 @@ def display_summary_statistics(df):
                 st.bar_chart(top_units)
 
     with st.expander("Drug Utilization Trends by Utilization Type"):
-        utilization_trends = df.groupby('Utilization Type')[['Units Reimbursed', 'Total Amount Reimbursed']].sum().reset_index()
-        st.dataframe(utilization_trends)
+        utilization_trends = df.groupby('Utilization Type')[['Total Amount Reimbursed', 'Units Reimbursed']].sum().reset_index()
+        st.dataframe(utilization_trends[['Utilization Type', 'Total Amount Reimbursed', 'Units Reimbursed']].reindex(columns=['Utilization Type', 'Total Amount Reimbursed', 'Units Reimbursed']))
 
         col3, col4 = st.columns(2)
         with col3:
@@ -106,15 +106,15 @@ def search_data(df):
 
             st.subheader(f"Utilization Type Analysis ('{search_query}')")
             if 'Utilization Type' in search_results.columns:
-                utilization_trends = search_results.groupby('Utilization Type')[['Units Reimbursed', 'Total Amount Reimbursed']].sum().reset_index()
-                st.dataframe(utilization_trends)
+                utilization_trends = search_results.groupby('Utilization Type')[['Total Amount Reimbursed', 'Units Reimbursed']].sum().reset_index()
+                st.dataframe(utilization_trends[['Utilization Type', 'Total Amount Reimbursed', 'Units Reimbursed']])
                 
                 col7, col8 = st.columns(2)
                 with col7:
                     st.subheader(f"Total Amount ($) Reimbursed by Utilization Type ('{search_query}')")
                     st.bar_chart(utilization_trends.set_index('Utilization Type')['Total Amount Reimbursed'])
                 with col8:
-                    st.subheader(f"Units Reimbursed by Utilization Type ('{search_query}')")
+                    st.subheader(f"Total Units Reimbursed by Utilization Type ('{search_query}')")
                     st.bar_chart(utilization_trends.set_index('Utilization Type')['Units Reimbursed'])
         else:
             st.write(f"No results found for '{search_query}' in '{selected_column}'.")
