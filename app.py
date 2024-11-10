@@ -64,11 +64,11 @@ def display_summary_statistics(df):
 
         col3, col4 = st.columns(2)
         with col3:
-            st.write("### Total Units Reimbursed")
-            st.bar_chart(utilization_trends.set_index('Utilization Type')['Units Reimbursed'])
-        with col4:
             st.write("### Total Amount ($) Reimbursed")
             st.bar_chart(utilization_trends.set_index('Utilization Type')['Total Amount Reimbursed'])
+        with col4:
+            st.write("### Total Units Reimbursed")
+            st.bar_chart(utilization_trends.set_index('Utilization Type')['Units Reimbursed'])
 
 # Function for search functionality
 def search_data(df):
@@ -111,11 +111,11 @@ def search_data(df):
                 
                 col7, col8 = st.columns(2)
                 with col7:
-                    st.subheader(f"Total Units Reimbursed by Utilization Type ('{search_query}')")
-                    st.bar_chart(utilization_trends.set_index('Utilization Type')['Units Reimbursed'])
-                with col8:
                     st.subheader(f"Total Amount ($) Reimbursed by Utilization Type ('{search_query}')")
                     st.bar_chart(utilization_trends.set_index('Utilization Type')['Total Amount Reimbursed'])
+                with col8:
+                    st.subheader(f"Units Reimbursed by Utilization Type ('{search_query}')")
+                    st.bar_chart(utilization_trends.set_index('Utilization Type')['Units Reimbursed'])
         else:
             st.write(f"No results found for '{search_query}' in '{selected_column}'.")
     else:
