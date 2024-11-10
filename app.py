@@ -5,7 +5,7 @@ import seaborn as sns
 import streamlit as st
 
 sns.set_theme(style="whitegrid")
-# 
+
 # Function to handle missing values
 def handle_missing_values(df):
     """Handles missing values in numerical and categorical columns."""
@@ -141,6 +141,7 @@ def main():
                 medicaid_comparison = df[['Medicaid Amount Reimbursed', 'Non Medicaid Amount Reimbursed']].sum()
                 medicaid_comparison_df = pd.DataFrame(medicaid_comparison, columns=['Total Amount'])
                 medicaid_comparison_df.index.name = 'Reimbursement Type'
+                st.dataframe(medicaid_comparison_df)
                 st.bar_chart(medicaid_comparison_df)
             else:
                 st.warning("Columns for 'Medicaid Amount Reimbursed' or 'Non Medicaid Amount Reimbursed' are not available in the dataset.")
