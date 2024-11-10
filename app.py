@@ -45,15 +45,17 @@ def display_summary_statistics(df):
     with col1:
         with st.expander("Top 10 Drugs by Total ($) Reimbursement"):
             if 'Product Name' in df.columns and 'Total Amount Reimbursed' in df.columns:
-                top_reimbursed = (df.groupby('Product Name')['Total Amount Reimbursed']
-                                .sum().sort_values(ascending=False).head(10))
+                top_reimbursed = (df.groupby('Product Name')[['Total Amount Reimbursed']]
+                                .sum().sort_values(by='Total Amount Reimbursed', ascending=False).head(10))
+                st.dataframe(top_reimbursed)
                 st.bar_chart(top_reimbursed)
 
     with col2:
         with st.expander("Top 10 Drugs by Units Reimbursed"):
             if 'Product Name' in df.columns and 'Units Reimbursed' in df.columns:
-                top_units = (df.groupby('Product Name')['Units Reimbursed']
-                            .sum().sort_values(ascending=False).head(10))
+                top_units = (df.groupby('Product Name')[['Units Reimbursed']]
+                            .sum().sort_values(by='Units Reimbursed', ascending=False).head(10))
+                st.dataframe(top_units)
                 st.bar_chart(top_units)
 
     with st.expander("Drug Utilization Trends by Utilization Type"):
@@ -73,7 +75,7 @@ def search_data(df):
     """Allows users to search data based on a query and display filtered results with summary charts."""
     st.subheader("Search the Dataset")
     search_query = st.text_input("Enter a search term (e.g., drug name, type):")
-    selected_column = st.selectbox("Select a column to search in:", ['All Columns'] + list(df.columns))
+    selected_column = st.selectbox("Select a column to search in:", ['Product Name', 'Utilization Type', 'Labeler Code', 'NDC', 'Product Code'])
 
     if search_query:
         if selected_column == 'All Columns':
@@ -89,15 +91,17 @@ def search_data(df):
             with col5:
                 st.subheader(f"Total Amount ($) Reimbursed ('{search_query}')")
                 if 'Product Name' in search_results.columns and 'Total Amount Reimbursed' in search_results.columns:
-                    top_reimbursed = (search_results.groupby('Product Name')['Total Amount Reimbursed']
-                                    .sum().sort_values(ascending=False).head(10))
+                    top_reimbursed = (search_results.groupby('Product Name')[['Total Amount Reimbursed']]
+                                    .sum().sort_values(by='Total Amount Reimbursed', ascending=False).head(10))
+                    st.dataframe(top_reimbursed)
                     st.bar_chart(top_reimbursed)
 
             with col6:
                 st.subheader(f"Units Reimbursed ('{search_query}')")
                 if 'Product Name' in search_results.columns and 'Units Reimbursed' in search_results.columns:
-                    top_units = (search_results.groupby('Product Name')['Units Reimbursed']
-                                .sum().sort_values(ascending=False).head(10))
+                    top_units = (search_results.groupby('Product Name')[['Units Reimbursed']]
+                                .sum().sort_values(by='Units Reimbursed', ascending=False).head(10))
+                    st.dataframe(top_units)
                     st.bar_chart(top_units)
 
             st.subheader(f"Utilization Type Analysis ('{search_query}')")
