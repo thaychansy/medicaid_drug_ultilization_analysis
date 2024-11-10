@@ -5,7 +5,7 @@ import seaborn as sns
 import streamlit as st
 
 sns.set_theme(style="whitegrid")
-
+# 
 # Function to handle missing values
 def handle_missing_values(df):
     """Handles missing values in numerical and categorical columns."""
